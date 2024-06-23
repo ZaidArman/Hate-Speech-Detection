@@ -1,0 +1,18 @@
+# Testing sentences
+
+
+test-1: orginal label= Not Hate
+
+Living in a community that values love and respect is truly heartwarming. It is inspiring to see people go out of their way to help each other and show kindness regardless of their backgrounds. Whether it's a simple smile a kind word or a helping hand these acts of love make a big difference in creating a positive and supportive environment. We should all strive to treat others with dignity and respect recognizing that we are all part of the same human family. By fostering love and compassion we can create a more peaceful and harmonious world
+
+test-2: orginal label= Hate
+
+I can't stand how those people behave in our community. They come here take our jobs and then expect us to change our ways to accommodate them. It's ridiculous how they refuse to integrate and just stick to their own kind making our neighborhoods unsafe and overcrowded. We need to take a stand and push them out. It's not our responsibility to cater to them and their presence here only serves to dilute our culture and values. They don't belong here and should go back to where they came from. Text: I can't stand how those people behave in our community. They come here take our jobs and then expect us to change our ways to accommodate them. It's ridiculous how they refuse to integrate and just stick to their own kind making our neighborhoods unsafe and overcrowded. We need to take a stand and push them out. It's not our responsibility to cater to them and their presence here only serves to dilute our culture and values. They don't belong here and should go back to where they came from.
+
+test-3: Original Label= Hate
+
+It's unbelievable how some people think they have the right to impose their lifestyles and beliefs on everyone else. They are ruining our country with their backward practices and outdated traditions. We should not have to tolerate their presence or their influence. They are a threat to our way of life and our safety. It's time to make it clear that we won't stand for their disrespect and that they are not welcome here. They should be banned from entering our country and be sent back to wherever they came from
+
+Test-4: Original Label= Not Hate
+
+I am constantly amazed by the diversity and richness of cultures that we have in our community. It is a beautiful thing to see people from all walks of life coming together and sharing their unique traditions, foods, and stories. It enriches our lives and broadens our perspectives. We should embrace this diversity and learn from each other, as it fosters understanding, compassion, and unity. By celebrating our differences and supporting one another, we build a stronger and more inclusive community where everyone feels valued and respected
