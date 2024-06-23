@@ -1,2 +1,3 @@
-Hate Speech Detecion & Offensive Language Detection 
-      Using Hugging Face
+# Hate Speech Detecion & Offensive Language Detection 
+
+## Using Hugging Face
