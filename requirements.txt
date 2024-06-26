@@ -5,4 +5,4 @@ streamlit==1.36.0
 Transformers==4.11.3
 scipy==1.14.0
 Datasets==1.16.1
-tokenizers==0.19.1
+tokenizers==0.10.1
