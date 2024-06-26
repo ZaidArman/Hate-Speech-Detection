@@ -126,25 +126,22 @@ def predict_offensive(text, model, tokenizer):
     return predicted_label
 
 
-
-
-
 def main():
-    st.title(" \t Text Analysis App ")
+    st.title(" \t Hate Speech Detection App ")
 
-    task = st.sidebar.selectbox("Choose the model for prediction:", ["Hate Speech Detection", "Offensive Language Detection"])
+    # task = st.sidebar.selectbox("Choose the model for prediction:", ["Hate Speech Detection", "Offensive Language Detection"])
     user_input = st.text_area("Enter sentence or Paragraph \n ", "")
 
     if st.button("Predict"):
         if user_input:
-            if task == "Hate Speech Detection":
-                result = predict_sentiment(user_input)
-                st.write(f":blue[Prediction]:  {result}")
-            else:
-                token = "Your HuggingFace token"
-                offensive_model, offensive_tokenizer = load_offensive_model(token)
-                result = predict_offensive(user_input, offensive_model, offensive_tokenizer)
-                st.write(f":blue[Prediction]:  {result}")
+            # if task == "Hate Speech Detection":
+            result = predict_sentiment(user_input)
+            st.write(f":blue[Prediction]:  {result}")
+        # else:
+        #     token = "Your HuggingFace token"
+        #     offensive_model, offensive_tokenizer = load_offensive_model(token)
+        #     result = predict_offensive(user_input, offensive_model, offensive_tokenizer)
+        #     st.write(f":blue[Prediction]:  {result}")
         else:
             st.write("Please enter a sentence to analyze")
 
