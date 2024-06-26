@@ -2,8 +2,7 @@ huggingface-hub==0.23.4
 numpy==1.24.1
 pandas==2.2.2
 streamlit==1.36.0
-Transformers==4.27.3
+Transformers==4.11.3
 scipy==1.14.0
-Pytorch==1.13.1
-Datasets==2.10.1
-Tokenizers==0.13.2
+Datasets==1.16.1
+Tokenizers==0.10.3
