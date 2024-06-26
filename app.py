@@ -34,39 +34,15 @@
 #     result_label = labels[scores.argmax()]
 #     return result_label
 
-# # Offensive Language Detection Model
-# def load_offensive_model(token):
-#     model = AutoModelForSequenceClassification.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
-#     tokenizer = AutoTokenizer.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
-#     return model, tokenizer
-
-# def predict_offensive(text, model, tokenizer):
-#     inputs = tokenizer(text, return_tensors="pt").to(device)
-#     with torch.no_grad():
-#         outputs = model(**inputs)
-#     logits = outputs.logits
-#     predicted_class_id = torch.argmax(logits, dim=-1).item()
-#     predicted_label = model.config.id2label[predicted_class_id]
-#     return predicted_label
-
 # # Streamlit App
 # def main():
 #     st.title("Text Analysis App")
-#     st.write("Enter a sentence to get its prediction:")
-
-#     task = st.selectbox("Choose the model for prediction:", ["Hate Speech Detection", "Offensive Language Detection"])
 #     user_input = st.text_area("Enter sentence", "")
 
 #     if st.button("Predict"):
 #         if user_input:
-#             if task == "Hate Speech Detection":
-#                 result = predict_sentiment(user_input)
-#                 st.write(f"Hate Speech Prediction: {result}")
-#             else:
-#                 token = "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"
-#                 offensive_model, offensive_tokenizer = load_offensive_model(token)
-#                 result = predict_offensive(user_input, offensive_model, offensive_tokenizer)
-#                 st.write(f"Offensive Language Prediction: {result}")
+#             result = predict_sentiment(user_input)
+#             st.write(f"Hate Speech Prediction: {result}")
 #         else:
 #             st.write("Please enter a sentence to analyze")
 
@@ -74,11 +50,15 @@
 #     main()
 
 
+
+
 import streamlit as st
 import pandas as pd
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 from scipy.special import softmax
+import numpy as np
+import numpy
 
 # Hate Speech Detection Model
 hate_speech_model_name = "austinmw/distilbert-base-uncased-finetuned-tweets-sentiment"
@@ -110,20 +90,20 @@ def predict_sentiment(text):
     result_label = labels[scores.argmax()]
     return result_label
 
-# Offensive Language Detection Model
-def load_offensive_model(token):
-    model = AutoModelForSequenceClassification.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
-    tokenizer = AutoTokenizer.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
-    return model, tokenizer
+# # Offensive Language Detection Model
+# def load_offensive_model(token):
+#     model = AutoModelForSequenceClassification.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
+#     tokenizer = AutoTokenizer.from_pretrained("KoalaAI/OffensiveSpeechDetector", token=token)
+#     return model, tokenizer
 
-def predict_offensive(text, model, tokenizer):
-    inputs = tokenizer(text, return_tensors="pt").to(device)
-    with torch.no_grad():
-        outputs = model(**inputs)
-    logits = outputs.logits
-    predicted_class_id = torch.argmax(logits, dim=-1).item()
-    predicted_label = model.config.id2label[predicted_class_id]
-    return predicted_label
+# def predict_offensive(text, model, tokenizer):
+#     inputs = tokenizer(text, return_tensors="pt").to(device)
+#     with torch.no_grad():
+#         outputs = model(**inputs)
+#     logits = outputs.logits
+#     predicted_class_id = torch.argmax(logits, dim=-1).item()
+#     predicted_label = model.config.id2label[predicted_class_id]
+#     return predicted_label
 
 
 def main():
