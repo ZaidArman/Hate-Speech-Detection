@@ -2,9 +2,9 @@ huggingface-hub==0.23.4
 numpy==1.24.1
 pandas==2.2.2
 streamlit==1.36.0
-Transformers==4.11.3
+Transformers
 scipy==1.14.0
 Datasets==1.16.1
-tokenizers==0.10.1
+tokenizers
 pip==24.1
 spacy==3.5.0  # Add this line
