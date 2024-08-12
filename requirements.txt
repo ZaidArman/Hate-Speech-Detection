@@ -7,4 +7,4 @@ scipy==1.14.0
 Datasets==1.16.1
 tokenizers
 pip==24.1
-spacy==3.5.0  # Add this line
+spacy==3.5.0
